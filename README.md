@@ -9,5 +9,3 @@ Girilen bir sayının asal olup olmadığını bulan uygulama
 Daha sonra yazılımı gelştireceğimiz programlama dilini seçmek için çalışmaya başladık.,
 Elimizdeki seçenekler Python, Java, Html/JavaScript.
 Python'da kullanıcı girişi güzel olmadığı için Java'yı düşündük. Fakat sunum yapmak istediğimiz yerde çalıştırma ortamı bulamama ihtimali olduğu için basit olan ve her tarayıcıda çalışabildiği için Html/JavaScript'e karar verdik.
-
-ffdffd
