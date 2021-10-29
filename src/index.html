@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+    <script>
+        function hesapla() {
+            var sayi = document.getElementById("girilenSayi").value;
+            for (sayac = 2; sayac < sayi; sayac = sayac + 1) {
+                if (Number.isInteger(sayi / sayac)) {
+                    alert("asal değil");
+                    return;
+                }
+            }
+            alert("asal sayı");
+        }
+
+    </script>
+    <h1>Sayınız Asal Mı?</h1>
+    <p>Lütfen sayınızı giriniz</p>
+    <input id="girilenSayi" /> <input type="button" onclick="hesapla()" value="Sayımız Asal Mı?">
+</body>
+
+</html>
