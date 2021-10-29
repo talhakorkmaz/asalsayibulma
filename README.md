@@ -10,19 +10,3 @@ Daha sonra yazılımı gelştireceğimiz programlama dilini seçmek için çalı
 Elimizdeki seçenekler Python, Java, Html/JavaScript.
 Python'da kullanıcı girişi güzel olmadığı için Java'yı düşündük. Fakat sunum yapmak istediğimiz yerde çalıştırma ortamı bulamama ihtimali olduğu için basit olan ve her tarayıcıda çalışabildiği için Html/JavaScript'e karar verdik.
 
-  <script>
-        function hesapla() {
-            var sayi = document.getElementById("girilenSayi").value;
-            for (sayac = 2; sayac < sayi; sayac = sayac + 1) {
-                if (Number.isInteger(sayi / sayac)) {
-                    alert("asal değil");
-                    return;
-                }
-            }
-            alert("asal sayı");
-        }
-
-    </script>
-    <h1>Sayınız Asal Mı?</h1>
-    <p>Lütfen sayınızı giriniz</p>
-    <input id="girilenSayi" /> <input type="button" onclick="hesapla()" value="Sayımız Asal Mı?">
