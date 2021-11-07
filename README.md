@@ -10,3 +10,5 @@ Daha sonra yazılımı gelştireceğimiz programlama dilini seçmek için çalı
 Elimizdeki seçenekler Python, Java, Html/JavaScript.
 Python'da kullanıcı girişi güzel olmadığı için Java'yı düşündük. Fakat sunum yapmak istediğimiz yerde çalıştırma ortamı bulamama ihtimali olduğu için basit olan ve her tarayıcıda çalışabildiği için Html/JavaScript'e karar verdik.
 
+Geliştirme ortamı için ücretsiz olan Microsoft firmasının  Visual Studio Code yazılım geliştirme edtitörünü kullandık. kaynakkodumuzu saklamak ve versiyonlama için github code deposuınu kullandık buna git yazılımı ile bağlandık.
+
