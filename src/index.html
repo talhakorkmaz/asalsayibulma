@@ -9,7 +9,7 @@
         let sayi=2;
         let asalAdet=0
         while (true) {
-            let time =  new Date().getTime();
+        let time =  new Date().getTime();
         let sonuc=true;
         for (sayac = 2; sayac < sayi; sayac = sayac + 1) {
             if (Number.isInteger(sayi / sayac)) {                
@@ -33,10 +33,10 @@
     <script id="worker2" type="javascript/worker">
         onmessage = function(e) {
             var sayi =parseInt(e.data);
-            var result=true;
+            var result=true;  
             if(sayi>1){                        
             for (sayac = 2; sayac < sayi; sayac = sayac + 1) {                
-                if (Number.isInteger(sayi / sayac)) {
+                if (Number.isInteger(sayi / sayac)) {              
                     result=false;
                     break;
                 }
@@ -47,7 +47,7 @@
             if(result)
             postMessage( sayi + " sayısı Asaldır.");
             else 
-            postMessage( sayi + " sayısı Asal değildir.");  
+            postMessage( sayi + " sayısı Asal değildir." );  
         };
         
       </script>
@@ -55,7 +55,7 @@
 
     <script>
         function asalSayiBul() {
-            let sonuc = document.getElementById("sonuc")
+        
             var blob = new Blob([
                 document.querySelector('#worker1').textContent
             ], { type: "text/javascript" })
@@ -63,7 +63,7 @@
 
             var worker = new Worker(window.URL.createObjectURL(blob));
             worker.onmessage = function (e) {
-                asalsayilar =  e.data;
+                asalsayilar = e.data;
 
             }
 
@@ -76,17 +76,17 @@
         const d = new Date();
 
         function hesapla() {
-            asalsayiSonuc="hesaplanıyor ....."
-            let time =  new Date().getTime();
+            asalsayiSonuc = "hesaplanıyor ....."
+            let time = new Date().getTime();
             var blob1 = new Blob([
                 document.querySelector('#worker2').textContent
             ], { type: "text/javascript" })
             var worker1 = new Worker(window.URL.createObjectURL(blob1));
             worker1.postMessage(document.getElementById("girilenSayi").value);
             worker1.onmessage = function (e) {
-                 d.getTime();
-                asalsayiSonuc = e.data + ".. Sonuc " +  (new Date().getTime()- time)/1000 +  "saniyede bulundu.";
-               
+                d.getTime();
+                asalsayiSonuc = e.data + ".. Sonuc " + (new Date().getTime() - time) / 1000 + "saniyede bulundu.";
+
             }
 
 
@@ -94,22 +94,22 @@
 
         function myTimer() {
             document.getElementById("asalSonuc").innerHTML = asalsayiSonuc;
-                document.getElementById("sonuc").innerHTML = asalsayilar;
-                document.getElementById("sonuc").scrollTop = document.getElementById("sonuc").scrollHeight;
+            document.getElementById("sonuc").innerHTML = asalsayilar;            
         }
 
     </script>
     <table style="width:100%">
         <tr>
             <td style="width:50%">
-                Asal sayılar Hesaplanıyor....  </p>
-                <div id="sonuc" style="width: 100%; height: 100px; overflow-y: scroll;">  </div>
+                Asal sayılar Hesaplanıyor.... </p>
+                <div id="sonuc" style="width: 100%; height: 100px; overflow-y: scroll;"> </div>
             </td>
 
             <td>
                 <h1>Sayınız Asal Mı?</h1>
                 <p>Lütfen sayınızı giriniz</p>
-                <input id="girilenSayi" type="number" /> <input type="button" onclick="hesapla()" value="Sayımız Asal Mı?">
+                <input id="girilenSayi" type="number" /> <input type="button" onclick="hesapla()"
+                    value="Sayımız Asal Mı?">
                 </p>
                 <div id="asalSonuc"> </div>
             </td>
