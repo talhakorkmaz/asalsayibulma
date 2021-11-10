@@ -34,12 +34,16 @@
         onmessage = function(e) {
             var sayi =parseInt(e.data);
             var result=true;
+            if(sayi>1){                        
             for (sayac = 2; sayac < sayi; sayac = sayac + 1) {                
                 if (Number.isInteger(sayi / sayac)) {
                     result=false;
                     break;
                 }
             }
+        }else{
+            result=false;   
+        }
             if(result)
             postMessage( sayi + " sayısı Asaldır.");
             else 
@@ -105,7 +109,7 @@
             <td>
                 <h1>Sayınız Asal Mı?</h1>
                 <p>Lütfen sayınızı giriniz</p>
-                <input id="girilenSayi" /> <input type="button" onclick="hesapla()" value="Sayımız Asal Mı?">
+                <input id="girilenSayi" type="number" /> <input type="button" onclick="hesapla()" value="Sayımız Asal Mı?">
                 </p>
                 <div id="asalSonuc"> </div>
             </td>
